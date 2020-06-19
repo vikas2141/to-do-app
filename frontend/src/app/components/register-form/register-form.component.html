@@ -1,0 +1,28 @@
+<h2>Register</h2>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Firstname: </label>
+        <input type="text" formControlName='firstName'>
+    </div>
+    <br>
+    <div>
+        <label>Lastname: </label>
+        <input type="text" formControlName='lastName'>
+    </div>
+    <br>
+    <div>
+        <label>EmailID: </label>
+        <input type="text" formControlName='emailId'>
+    </div>
+    <small *ngIf="isEmailidAlreadyExist" style="color: red">This emailId already exist please try again with another emailId.<br></small>
+    <br>
+    <div>
+        <label>Create Password: </label>
+        <input type="text" formControlName='createPassword'>
+    </div>
+    <br>
+    <button type="submit">Sign Up</button>
+
+</form>
+<br>
+Already have an account? <a routerLink="/login">Login</a>

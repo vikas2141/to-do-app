@@ -1,0 +1,17 @@
+<h2>Login Form</h2>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <small *ngIf="isUsernameOrPasswordInCorrect" style="color: red;">Username or password is incorrect</small>
+    <div>
+        <label>Username: </label>
+        <input type="text" formControlName='emailId'>
+    </div>
+    <br>
+    <div>
+        <label>Password: </label>
+        <input type="text" formControlName='password'>
+    </div>
+    <br>
+    <button type="submit">Done</button>
+</form> 
+<br>
+<a routerLink="/register">Create New Account</a>

@@ -1,0 +1,4 @@
+<nav class="navBar" *ngIf="isLoggedIn">
+    {{user?.firstname}} {{user?.lastname}}
+    <button class="log-out-btn" (click)="onLogoutClick($event)">Log Out</button>
+</nav>

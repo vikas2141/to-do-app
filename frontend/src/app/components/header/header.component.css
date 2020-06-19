@@ -1,0 +1,16 @@
+.navBar{
+    font-weight: bold; 
+    font-family: inherit; 
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.log-out-btn{
+    text-align: center; 
+    position: absolute; 
+    right: 10px;
+}

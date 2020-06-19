@@ -1,0 +1,28 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit($event)">
+    <div class="form-group">
+        <label for="firstname">Firstname</label>
+        <input type="text" id="firstname" formControlName='firstname' [attr.disabled]="!isCreate&&!isEdit?'':null">
+    </div>
+    <br>
+    <div>
+        <label for="lastname">Lastname</label>
+        <input type="text" id="lastname" formControlName='lastname' [attr.disabled]="!isCreate&&!isEdit?'':null">
+    </div>
+    <div>
+        <input type="radio" id="male" name="gender" value="male" formControlName='gender' [attr.disabled]="!isCreate&&!isEdit?'':null"> 
+        <label for="male">Male</label>
+    </div>
+    <div>
+        <input type="radio" id="female" name="gender" value="female" formControlName='gender' [attr.disabled]="!isCreate&&!isEdit?'':null">
+        <label for="female">Female</label>
+    </div>
+    <div>
+        <input type="radio" id="others" name="gender" value="others" formControlName='gender' [attr.disabled]="!isCreate&&!isEdit?'':null">
+        <label for="others">Others</label>
+    </div>
+    <button type="submit" *ngIf="isCreate||isEdit" [disabled]="userForm.invalid">Submit</button>
+</form>
+
+<button *ngIf="!isCreate&&!isEdit" (click)="onEditClick($event)">Edit</button>
+
+

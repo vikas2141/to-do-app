@@ -1,0 +1,15 @@
+<form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Name <span style="color: red;">*</span>: </label>
+        <input type="text" formControlName="name" [attr.disabled]="!isCreate&&!isEdit?'':null">
+        <small style="color: red;" *ngIf="getNamValue?.touched&&getNamValue?.errors?.required">Name is required</small>
+    </div>
+    <br>
+    <div>
+        <label>Discription: </label>
+        <input type="text" formControlName="discription"  [attr.disabled]="!isCreate&&!isEdit?'':null">
+    </div>
+    <br>
+    <button type="submit" *ngIf="isCreate||isEdit" [disabled]="todoForm?.invalid">Submit</button>
+</form>
+<button *ngIf="!isCreate&&!isEdit" (click)='onEditClick()'>Edit</button>

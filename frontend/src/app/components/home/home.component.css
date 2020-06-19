@@ -1,0 +1,47 @@
+.btn{
+    background-color: blue; 
+    font-size: 22px; 
+    color: aliceblue; 
+    border-radius: 20px;
+    border:none;
+    cursor: pointer;
+    
+}
+.btn:focus{
+    outline: 0;
+}
+.btn:hover{
+    background-color: rosybrown;
+    color: aliceblue
+}
+.card{
+    display:grid; 
+    grid-template-columns: calc(100%/4) calc(100%/4) calc(100%/4) calc(100%/4); 
+    grid-gap: 25px
+}
+.form{
+    border: groove;  
+    text-align: center;
+    padding: 10px;
+    line-height: 2;
+}
+.edit-btn{
+    background-color: aliceblue; 
+    font-size: 15px; 
+    color: blue;
+    margin: 5px;
+}
+.edit{
+    padding-top: 2px; 
+    padding-bottom: 2px;
+}
+.del-btn{
+    background-color: aliceblue; 
+    font-size: 15px; 
+    color: blue;
+    margin: 5px;
+}
+.del{
+    padding-top: 2px; 
+    padding-bottom: 2px;
+}

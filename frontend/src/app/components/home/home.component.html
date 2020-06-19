@@ -1,0 +1,22 @@
+<div>
+    <button type="button" class="btn" (click)="onNewToDoClick()">
+        New To Do
+    </button>
+</div>
+<br>
+<div class="card">
+    <div class="form" *ngFor="let todo of todoList">
+        <div style="text-align: start;">
+            <label for="">Name: {{todo?.name}} </label>
+        </div>
+        <div style="text-align: start;">
+            <label>Description: {{todo?.discription}}</label>
+        </div>
+        <div style="display: flex;
+        justify-content: space-around;">
+            <button (click)="viewSubmit(todo?.id)">View</button>
+            <button (click)="onDelClick(todo?.id)">Delete</button>
+        </div>
+
+    </div>
+</div>
